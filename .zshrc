@@ -90,11 +90,6 @@ alias gt="git tree"
 # carton
 alias carton="plenv exec carton"
 
-# apache
-alias apache_start="sudo apachectl start"
-alias apache_restart="sudo apachectl restart"
-alias apache_stop="sudo apachectl stop"
-
 # locate
 alias locate_update="sudo /usr/libexec/locate.updatedb"
 
