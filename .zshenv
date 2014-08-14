@@ -26,3 +26,12 @@ PATH=$GOPATH/bin:$PATH
 PATH=$HOME/private/bin:$PATH
 
 export PATH
+
+
+
+#==============================#
+# color                        #
+#==============================#
+
+export CLICOLOR=1
+export LSCOLORS=CxGxcxdxCxegedabagacad
