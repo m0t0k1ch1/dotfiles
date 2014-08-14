@@ -1,0 +1,33 @@
+;; -*- emacs-lisp -*- <14/08/07 21:13:04 /Users/m0t0k1ch1/.emacs.d/tramp>
+;; Tramp connection history.  Don't change this file.
+;; You can delete it, forcing Tramp to reapply the checks.
+
+((["sudo" "root" "Sugar-Pro.local" nil nil]
+  ("uname" "Darwin 13.2.0")
+  ("test" "test")
+  ("remote-path"
+   ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("busybox" nil)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("~kayac" "sh: cd: ~kayac: No such file or directory")
+  ("~root" "/var/root")
+  ("file-exists" "test -e")
+  ("readlink" nil)
+  ("stat" nil)
+  ("ls" "/bin/ls")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 0)
+  ("uid-integer" 0)
+  ("ls-dired" nil))
+ (["scpc" nil "kayac-test" nil nil]
+  ("uname" "Linux 2.6.32-279.1.1.el6.x86_64")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("busybox" nil)
+  ("file-exists" "test -e")
+  ("~" "/home/sato-motoki")))

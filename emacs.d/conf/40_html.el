@@ -1,0 +1,6 @@
+(setq auto-mode-alist (cons '("\\.blade.php" . web-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.html$" . web-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.mt$" . web-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.tmpl$" . web-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.tt$" . web-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.tx$" . web-mode) auto-mode-alist))
