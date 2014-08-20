@@ -10,6 +10,9 @@ export DYLD_LIBRARY_PATH=$HOME/.mysql/5.5.34/lib:$DYLD_LIBRARY_PATH
 PATH=/usr/local/bin:$PATH
 PATH=/usr/local/sbin:$PATH
 
+# heroku
+PATH=/usr/local/heroku/bin:$PATH
+
 # mysql
 PATH=$HOME/.mysql/5.5.34/bin:$PATH
 
