@@ -87,6 +87,12 @@ alias gl="git log"
 alias gs="git status"
 alias gt="git tree"
 
+# mysql
+alias mysql-5.5.34="/Users/m0t0k1ch1/.mysql/5.5.34/bin/mysql"
+alias mysql-5.6.21="/Users/m0t0k1ch1/.mysql/5.6.21/bin/mysql"
+alias mysql.server-5.5.34="/Users/m0t0k1ch1/.mysql/5.5.34/support-files/mysql.server"
+alias mysql.server-5.6.21="/Users/m0t0k1ch1/.mysql/5.6.21/support-files/mysql.server"
+
 # carton
 alias carton="plenv exec carton"
 

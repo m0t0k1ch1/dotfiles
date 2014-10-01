@@ -3,7 +3,6 @@
 #==============================#
 
 export DOCKER_HOST=tcp://localhost:4243
-export DYLD_LIBRARY_PATH=$HOME/.mysql/5.5.34/lib
 export GOPATH=$HOME/go
 
 # homebrew
@@ -16,8 +15,8 @@ PATH=$GOPATH/bin:$PATH
 # heroku
 PATH=/usr/local/heroku/bin:$PATH
 
-# mysql
-PATH=$HOME/.mysql/5.5.34/bin:$PATH
+# mysql-build
+PATH=$HOME/.mysql/mysql-build/bin:$PATH
 
 # plenv
 PATH=$HOME/.plenv/shims:$PATH
