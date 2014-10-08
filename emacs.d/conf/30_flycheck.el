@@ -11,7 +11,7 @@
 (flycheck-define-checker perl-project-libs
   "A perl syntax checker."
   :command ("perl"
-            "-MProject::Libs lib_dirs => [qw(local/lib/perl5), qw(.)]"
+            "-MProject::Libs lib_dirs => [qw(local/lib/perl5 .)]"
             "-wc"
             source-inplace)
   :error-patterns ((error line-start
