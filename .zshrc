@@ -77,7 +77,7 @@ eval "$(rbenv init -)"
 
 # git
 alias gb="git branch"
-alias gbcp="git branch | peco | xargs git checkout"
+alias gcp="git branch | peco | xargs git checkout"
 alias gbdp="git branch | peco | xargs git branch -d"
 alias gbDp="git branch | peco | xargs git branch -D"
 alias gc="git checkout"
