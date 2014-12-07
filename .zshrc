@@ -77,10 +77,10 @@ eval "$(rbenv init -)"
 
 # git
 alias gb="git branch"
-alias gcp="git branch | peco | xargs git checkout"
 alias gbdp="git branch | peco | xargs git branch -d"
 alias gbDp="git branch | peco | xargs git branch -D"
 alias gc="git checkout"
+alias gcp="git branch | peco | xargs git checkout"
 alias gd="git diff"
 alias gf="git fetch"
 alias gl="git log"
@@ -131,7 +131,7 @@ function cdg() {
 }
 
 function gbc() {
-    echo `git branch | grep $1 | tail -1 | xargs git checkout`
+    `git branch | grep $1 | tail -1 | xargs git checkout`
 }
 
 function peco-select-history() {
