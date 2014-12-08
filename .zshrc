@@ -113,7 +113,7 @@ function zp() {
 }
 
 function gisp() {
-    url=`gis | peco | cut -f2`
+    url=`gis $@ | peco | cut -f2`
     open $url
 }
 
