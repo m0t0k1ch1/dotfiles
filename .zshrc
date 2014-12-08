@@ -112,6 +112,11 @@ function zp() {
     cd $dir
 }
 
+function gisp() {
+    url=`gis | peco | cut -f2`
+    open $url
+}
+
 function cdg() {
     current_dir=$PWD
     dir=$PWD
