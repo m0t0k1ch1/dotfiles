@@ -30,6 +30,9 @@ PATH=$HOME/.plenv/shims:$PATH
 # rbenv
 PATH=$HOME/.rbenv/shims:$PATH
 
+# composer
+PATH=$HOME/.composer/vendor/bin:$PATH
+
 # private
 PATH=$HOME/private/bin:$PATH
 
