@@ -76,7 +76,7 @@ eval "$(rbenv init -)"
 #==============================#
 
 # emacsclient
-alias em='emacsclient -nw -a ""'
+alias emacs='emacsclient -nw -a ""'
 
 # git
 alias gb="git branch"
