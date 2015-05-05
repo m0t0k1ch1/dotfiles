@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <14/10/07 21:48:34 /Users/m0t0k1ch1/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <15/03/21 17:11:58 /Users/m0t0k1ch1/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -30,4 +30,6 @@
   ("remote-shell" "/bin/sh")
   ("busybox" nil)
   ("file-exists" "test -e")
-  ("~" "/home/sato-motoki")))
+  ("~" "/home/sato-motoki"))
+ (["scp" nil "sudo" nil nil]
+  nil))
