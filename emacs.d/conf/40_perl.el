@@ -1,6 +1,6 @@
 (defalias 'perl-mode 'cperl-mode)
-(setq auto-mode-alist (cons '("\\.t$" . cperl-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.psgi$" . cperl-mode) auto-mode-alist))
+(add-to-list 'auto-mode-alist '("\\.t$" . cperl-mode))
+(add-to-list 'auto-mode-alist '("\\.psgi$" . cperl-mode))
 (add-hook 'cperl-mode-hook
           (lambda()
             (setq cperl-indent-level 4
