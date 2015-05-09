@@ -12,9 +12,6 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin
 PATH=/usr/local/bin:$PATH
 PATH=/usr/local/sbin:$PATH
 
-# go
-PATH=$GOPATH/bin:$PATH
-
 # heroku
 PATH=/usr/local/heroku/bin:$PATH
 
@@ -32,6 +29,9 @@ PATH=$HOME/.rbenv/shims:$PATH
 
 # composer
 PATH=$HOME/.composer/vendor/bin:$PATH
+
+# go
+PATH=$GOPATH/bin:$PATH
 
 # private
 PATH=$HOME/private/bin:$PATH
