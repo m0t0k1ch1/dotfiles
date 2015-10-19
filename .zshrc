@@ -87,6 +87,7 @@ alias gcp="git branch | peco | xargs git checkout"
 alias gd="git diff"
 alias gf="git fetch"
 alias gl="git log"
+alias gmp="git branch | peco | xargs git merge --no-ff"
 alias gs="git status"
 alias gt="git tree"
 
