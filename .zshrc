@@ -92,7 +92,6 @@ alias gf="git fetch"
 alias gl="git log"
 alias gmp="git branch | peco | xargs git merge --no-ff"
 alias gs="git status"
-alias gt="git tree"
 
 # carton
 alias carton="plenv exec carton"
@@ -138,10 +137,6 @@ function cdg() {
     echo "$current_dir is not included in the project managed by Git"
 }
 
-function gbc() {
-    `git branch | grep $1 | tail -1 | xargs git checkout`
-}
-
 function peco-select-history() {
     local tac
     if which tac > /dev/null; then
@@ -157,3 +152,14 @@ function peco-select-history() {
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
+
+function peco-src () {
+    local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+    if [ -n "$selected_dir" ]; then
+        BUFFER="cd ${selected_dir}"
+        zle accept-line
+    fi
+    zle clear-screen
+}
+zle -N peco-src
+bindkey '^]' peco-src
