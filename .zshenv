@@ -17,9 +17,6 @@ PATH=$HOME/.plenv/shims:$PATH
 # rbenv
 PATH=$HOME/.rbenv/shims:$PATH
 
-# composer
-PATH=$HOME/.composer/vendor/bin:$PATH
-
 # go
 PATH=$GOPATH/bin:$PATH
 
