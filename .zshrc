@@ -64,10 +64,10 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #==============================#
 
 # plenv
-eval "$(plenv init -)"
+eval "$(plenv init - zsh)"
 
 # rbenv
-eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
 
 # docker
 eval "$(docker-machine env default)"
@@ -93,10 +93,6 @@ alias gl="git log"
 alias gmp="git branch | peco | xargs git merge --no-ff"
 alias gs="git status"
 alias gt="git tree"
-
-# mysql
-alias mysql.server-5.5.34="/Users/m0t0k1ch1/.mysql/5.5.34/support-files/mysql.server"
-alias mysql.server-5.6.21="/Users/m0t0k1ch1/.mysql/5.6.21/support-files/mysql.server"
 
 # carton
 alias carton="plenv exec carton"
