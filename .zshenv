@@ -11,12 +11,6 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin
 PATH=/usr/local/bin:$PATH
 PATH=/usr/local/sbin:$PATH
 
-# plenv
-PATH=$HOME/.plenv/shims:$PATH
-
-# rbenv
-PATH=$HOME/.rbenv/shims:$PATH
-
 # go
 PATH=$GOPATH/bin:$PATH
 
