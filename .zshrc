@@ -60,7 +60,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 #==============================#
-# development                  #
+# env initialization           #
 #==============================#
 
 # plenv
@@ -97,7 +97,7 @@ alias gs="git status"
 alias carton="plenv exec carton"
 
 # locate
-alias locate_update="sudo /usr/libexec/locate.updatedb"
+alias locate-update="sudo /usr/libexec/locate.updatedb"
 
 # utility
 alias ll="ls -al"
