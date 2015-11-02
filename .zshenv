@@ -14,6 +14,9 @@ PATH=/usr/local/sbin:$PATH
 # go
 PATH=$GOPATH/bin:$PATH
 
+# home
+PATH=$HOME/bin:$PATH
+
 export PATH
 
 
