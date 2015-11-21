@@ -7,7 +7,6 @@
 ;; load-path
 (add-to-list 'load-path "~/.emacs.d/elisp")
 (add-to-list 'load-path "~/go/src/github.com/nsf/gocode/emacs")
-(add-to-list 'load-path "~/go/src/github.com/dougm/goflymake")
 
 ;; exec-path
 (add-to-list 'exec-path (expand-file-name "/usr/local/bin"))
