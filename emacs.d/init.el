@@ -6,11 +6,11 @@
 
 ;; load-path
 (add-to-list 'load-path "~/.emacs.d/elisp")
-(add-to-list 'load-path "~/go/src/github.com/nsf/gocode/emacs")
+(add-to-list 'load-path "~/.ghq/src/github.com/nsf/gocode/emacs")
 
 ;; exec-path
 (add-to-list 'exec-path (expand-file-name "/usr/local/bin"))
-(add-to-list 'exec-path (expand-file-name "~/go/bin"))
+(add-to-list 'exec-path (expand-file-name "~/.ghq/bin"))
 
 ;; init-loader
 (require 'init-loader)
