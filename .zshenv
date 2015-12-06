@@ -3,7 +3,7 @@
 #==============================#
 
 export DOCKER_HOST=tcp://localhost:4243
-export GOPATH=$HOME/go
+export GOPATH=$HOME/.ghq
 
 PATH=/usr/bin:/bin:/usr/sbin:/sbin
 
