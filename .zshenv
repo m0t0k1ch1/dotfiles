@@ -4,6 +4,7 @@
 
 export DOCKER_HOST=tcp://localhost:4243
 export GOPATH=$HOME/.ghq
+export PGDATA=/usr/local/var/postgres
 
 PATH=/usr/bin:/bin:/usr/sbin:/sbin
 
