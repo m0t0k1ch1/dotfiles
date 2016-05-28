@@ -4,7 +4,7 @@
 
 setopt prompt_subst
 autoload -Uz vcs_info
-PROMPT='%F{cyan}%n%f%F{yellow}★%f%F{cyan}%m%f > '
+PROMPT='%F{cyan}%n%f%F{yellow}★ %f%F{cyan}%m%f > '
 RPROMPT=$'$(show_vcs_info)'
 
 zstyle ':vcs_info:*' formats \
