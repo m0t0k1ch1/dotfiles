@@ -1,6 +1,9 @@
 ;; helm
+(require 'helm-config)
 (helm-mode 1)
-(add-to-list 'helm-completing-read-handlers-alist '(find-file . nil))
+(define-key global-map (kbd "C-x b") 'helm-for-files)
+(define-key global-map (kbd "C-x C-f") 'helm-find-files)
+(define-key global-map (kbd "M-x") 'helm-M-x)
 
 ;; C-h: delete-backward-char
 (eval-after-load 'helm
