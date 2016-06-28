@@ -40,10 +40,10 @@
 (autopair-global-mode)
 
 ;; C-h: delete-backward-char
-(global-set-key "\C-h" 'delete-backward-char)
+(define-key global-map (kbd "C-h") 'delete-backward-char)
 
 ;; C-t: other-window-or-split
-(defun other-window-or-split () ; http://d.hatena.ne.jp/rubikitch/20100210/emacs
+(defun other-window-or-split();
   (interactive)
   (when (one-window-p)
     (split-window-horizontally))
