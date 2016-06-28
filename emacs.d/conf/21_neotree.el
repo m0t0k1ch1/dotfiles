@@ -1,2 +1,5 @@
+;; neotree
 (require 'neotree)
-(define-key global-map (kbd "C-c d") 'neotree-dir)
+(setq neo-show-hidden-files t)
+(setq neo-smart-open t)
+(define-key global-map (kbd "C-c d") 'neotree-toggle)
