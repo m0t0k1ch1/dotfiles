@@ -63,6 +63,9 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # env initialization           #
 #==============================#
 
+# pyenv
+eval "$(pyenv init - zsh)"
+
 # plenv
 eval "$(plenv init - zsh)"
 
