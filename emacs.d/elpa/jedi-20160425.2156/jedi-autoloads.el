@@ -3,8 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "jedi" "jedi.el" (22386 50956 0 0))
-;;; Generated autoloads from jedi.el
+;;;### (autoloads nil "jedi" "../../../../../../../../.emacs.d/elpa/jedi-20160425.2156/jedi.el"
+;;;;;;  "dda4be63554e370f565496d72ff4db2e")
+;;; Generated autoloads from ../../../../../../../../.emacs.d/elpa/jedi-20160425.2156/jedi.el
 
 (autoload 'jedi:ac-setup "jedi" "\
 Add Jedi AC sources to `ac-sources'.
@@ -31,6 +32,12 @@ Complete code at point.
 \(fn)" nil nil)
 
 (setq jedi:setup-function #'jedi:ac-setup jedi:mode-function #'jedi:auto-complete-mode)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../../../../../.emacs.d/elpa/jedi-20160425.2156/jedi-autoloads.el"
+;;;;;;  "../../../../../../../../.emacs.d/elpa/jedi-20160425.2156/jedi.el")
+;;;;;;  (22414 14936 907247 0))
 
 ;;;***
 
