@@ -49,3 +49,9 @@
     (split-window-horizontally))
   (other-window 1))
 (define-key global-map (kbd "C-t") 'other-window-or-split)
+
+;; C-c c: comment-region
+(define-key global-map (kbd "C-c c") 'comment-region)
+
+;; C-c u: uncomment-region
+(define-key global-map (kbd "C-c u") 'uncomment-region)
