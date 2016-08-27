@@ -72,9 +72,6 @@ eval "$(plenv init - zsh)"
 # rbenv
 eval "$(rbenv init - zsh)"
 
-# docker
-eval "$(docker-machine env default)"
-
 
 
 #==============================#
