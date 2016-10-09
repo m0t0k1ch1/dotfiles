@@ -15,3 +15,17 @@
 ;; init-loader
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/conf")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (yaml-mode web-mode toml-mode scala-mode2 ruby-block python-mode popwin php-mode perl-completion nginx-mode neotree markdown-mode magit lua-mode keyfreq js2-mode jedi init-loader helm-ag groovy-mode go-eldoc go-autocomplete git-rebase-mode git-gutter git-commit-mode fringe-helper flycheck f ensime direx cython-mode csharp-mode autopair auto-install auto-compile anything))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
