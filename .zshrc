@@ -81,6 +81,9 @@ eval "$(rbenv init - zsh)"
 # emacsclient
 alias emacs='emacsclient -nw -a ""'
 
+# docker
+alias mysql='docker exec -it mysql mysql'
+
 # git
 alias gb="git branch"
 alias gbdp="git branch | peco | xargs git branch -d"
