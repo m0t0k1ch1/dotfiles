@@ -84,6 +84,7 @@ alias emacs='emacsclient -nw -a ""'
 # docker
 alias mysql='docker exec -it mysql mysql'
 alias psql='docker exec -it postgresql psql'
+alias redis='docker exec -it redis redis-cli'
 
 # git
 alias gb="git branch"
