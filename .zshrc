@@ -107,6 +107,7 @@ alias locate-update="sudo /usr/libexec/locate.updatedb"
 
 # utility
 alias ll="ls -al"
+alias rand="cat /dev/urandom | LC_CTYPE=C tr -dc '[:alnum:]' | head -c"
 
 
 
