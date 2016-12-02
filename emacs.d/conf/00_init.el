@@ -1,9 +1,6 @@
 ;; use utf-8
 (prefer-coding-system 'utf-8)
 
-;; theme
-(load-theme 'tsdh-dark t)
-
 ;; show line number
 (line-number-mode t)
 
