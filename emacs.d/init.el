@@ -1,7 +1,6 @@
 ;; elpa
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
 ;; load-path
@@ -35,7 +34,7 @@
  '(fci-rule-color "#2a2a2a")
  '(package-selected-packages
    (quote
-    (obsidian-theme yaml-mode web-mode toml-mode scala-mode2 ruby-block python-mode popwin php-mode perl-completion nginx-mode neotree markdown-mode magit lua-mode keyfreq js2-mode jedi init-loader helm-ag groovy-mode go-eldoc go-autocomplete git-rebase-mode git-gutter git-commit-mode fringe-helper flycheck f ensime direx cython-mode csharp-mode autopair auto-install auto-compile anything))))
+    (go-mode helm auto-complete obsidian-theme yaml-mode web-mode toml-mode scala-mode2 ruby-block python-mode php-mode nginx-mode neotree markdown-mode lua-mode js2-mode jedi init-loader go-autocomplete git-gutter flycheck ensime cython-mode csharp-mode autopair auto-install auto-compile))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

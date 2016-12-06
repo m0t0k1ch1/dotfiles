@@ -11,20 +11,6 @@
                   cperl-indent-parens-as-block t
                   cperl-tab-always-indent t)))
 
-;; perl-completion
-(require 'perl-completion)
-(add-hook 'cperl-mode-hook
-          (lambda()
-            (perl-completion-mode t)))
-
-;; auto-complete
-(add-hook 'cperl-mode-hook
-          (lambda ()
-            (when (require 'auto-complete nil t) ; no error whatever auto-complete.el is not installed.
-              (auto-complete-mode t)
-              (make-variable-buffer-local 'ac-sources)
-              (setq ac-sources '(ac-source-perl-completion)))))
-
 ;; flycheck
 (add-hook 'cperl-mode-hook
           (lambda ()

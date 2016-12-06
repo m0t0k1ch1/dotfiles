@@ -9,9 +9,5 @@
 ;; go-autocomplete
 (require 'go-autocomplete)
 
-;; go-eldoc
-(require 'go-eldoc)
-(add-hook 'go-mode-hook 'go-eldoc-setup)
-
 ;; flycheck
 (add-hook 'go-mode-hook 'flycheck-mode)
