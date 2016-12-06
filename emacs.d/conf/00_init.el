@@ -1,6 +1,9 @@
 ;; use utf-8
 (prefer-coding-system 'utf-8)
 
+;; hide menu bar
+(menu-bar-mode -1)
+
 ;; show line number
 (line-number-mode t)
 
