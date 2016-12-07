@@ -2,6 +2,7 @@
 (require 'helm-config)
 (helm-mode 1)
 (define-key global-map (kbd "C-x b") 'helm-for-files)
+(define-key global-map (kbd "C-x y") 'helm-show-kill-ring)
 (define-key global-map (kbd "C-x C-f") 'helm-find-files)
 (define-key global-map (kbd "C-x C-x") 'helm-M-x)
 (define-key global-map (kbd "M-x") 'helm-M-x)
