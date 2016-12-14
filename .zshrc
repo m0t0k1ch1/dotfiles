@@ -85,6 +85,7 @@ alias emacs='emacsclient -nw -a ""'
 alias mysql='docker exec -it mysql mysql'
 alias psql='docker exec -it postgresql psql'
 alias redis='docker exec -it redis redis-cli'
+alias di='docker ps -q | xargs docker inspect --format="{{.NetworkSettings.IPAddress}} {{.State.Status}} {{.Name}} from {{.Config.Image}}"'
 
 # git
 alias gb="git branch"
