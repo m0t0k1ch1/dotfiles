@@ -83,6 +83,7 @@ alias emacs='emacsclient -nw -a ""'
 
 # docker
 alias mysql='docker exec -it mysql mysql'
+alias mysqldump='docker exec -it mysql mysqldump'
 alias psql='docker exec -it postgresql psql'
 alias redis='docker exec -it redis redis-cli'
 alias di='docker ps -q | xargs docker inspect --format="{{.NetworkSettings.IPAddress}} {{.State.Status}} {{.Name}} from {{.Config.Image}}"'
@@ -99,6 +100,9 @@ alias gf="git fetch -p"
 alias gl="git log"
 alias gmp="git branch | peco | xargs git merge --no-ff"
 alias gs="git status"
+
+# mastodon
+alias m="gomif -i mastodon.m0t0k1ch1.com | jq ."
 
 # carton
 alias carton="plenv exec carton"
