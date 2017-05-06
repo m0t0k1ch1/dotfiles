@@ -34,7 +34,7 @@
  '(fci-rule-color "#2a2a2a")
  '(package-selected-packages
    (quote
-    (dockerfile-mode go-mode helm auto-complete obsidian-theme yaml-mode web-mode toml-mode scala-mode2 ruby-block python-mode php-mode nginx-mode neotree markdown-mode lua-mode js2-mode jedi init-loader go-autocomplete git-gutter flycheck ensime cython-mode csharp-mode autopair auto-install auto-compile))))
+    (solidity-mode dockerfile-mode go-mode helm auto-complete obsidian-theme yaml-mode web-mode toml-mode scala-mode2 ruby-block python-mode php-mode nginx-mode neotree markdown-mode lua-mode js2-mode jedi init-loader go-autocomplete git-gutter flycheck ensime cython-mode csharp-mode autopair auto-install auto-compile))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
