@@ -175,3 +175,4 @@ function peco-src () {
 }
 zle -N peco-src
 bindkey '^]' peco-src
+eval $(/usr/libexec/path_helper -s)
