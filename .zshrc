@@ -150,29 +150,29 @@ function cdg() {
 }
 
 function peco-select-history() {
-    local tac
-    if which tac > /dev/null; then
-        tac="tac";
-    else
-        tac="tail -r";
-    fi
-    BUFFER=$(history -n 1 | \
-        eval $tac | \
-        peco --query "$LBUFFER")
+    BUFFER=$(history -n 1 | eval tail -r | peco --query "$LBUFFER")
     CURSOR=$#BUFFER
-    zle clear-screen
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
 
-function peco-src () {
+function peco-src() {
     local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
     if [ -n "$selected_dir" ]; then
         BUFFER="cd ${selected_dir}"
         zle accept-line
     fi
-    zle clear-screen
 }
 zle -N peco-src
 bindkey '^]' peco-src
 eval $(/usr/libexec/path_helper -s)
+
+function peco-ssh-host() {
+    local selected_host=$(egrep -i '^Host\s+.+' $HOME/.ssh/config $(find $HOME/.ssh/conf.d -follow -type f 2>/dev/null) | egrep -v '[*?]' | awk '{print $2}' | sort | peco --query "$LBUFFER")
+    if [ -n "$selected_host" ]; then
+        BUFFER="ssh ${selected_host}"
+        zle accept-line
+    fi
+}
+zle -N peco-ssh-host
+bindkey '^[' peco-ssh-host
