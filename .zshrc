@@ -170,7 +170,7 @@ eval $(/usr/libexec/path_helper -s)
 function peco-ssh-host() {
     local selected_host=$(egrep -i '^Host\s+.+' $HOME/.ssh/config $(find $HOME/.ssh/conf.d -follow -type f 2>/dev/null) | egrep -v '[*?]' | awk '{print $2}' | sort | peco --query "$LBUFFER")
     if [ -n "$selected_host" ]; then
-        BUFFER="ssh ${selected_host}"
+        BUFFER="ssh ${selected_host} -A"
         zle accept-line
     fi
 }
