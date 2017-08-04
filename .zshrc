@@ -111,7 +111,7 @@ alias carton="plenv exec carton"
 alias locate-update="sudo /usr/libexec/locate.updatedb"
 
 # utility
-alias ll="ls -al"
+alias ll="exa -bghl"
 alias rand="cat /dev/urandom | LC_CTYPE=C tr -dc '[:alnum:]' | head -c"
 
 
