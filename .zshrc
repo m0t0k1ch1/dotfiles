@@ -164,7 +164,7 @@ function peco-src() {
     fi
 }
 zle -N peco-src
-bindkey '^]' peco-src
+bindkey '^[' peco-src
 eval $(/usr/libexec/path_helper -s)
 
 function peco-ssh-host() {
@@ -175,4 +175,4 @@ function peco-ssh-host() {
     fi
 }
 zle -N peco-ssh-host
-bindkey '^[' peco-ssh-host
+bindkey '^]' peco-ssh-host
