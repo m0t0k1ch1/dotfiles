@@ -10,6 +10,7 @@
 (depends-on "multiple-cursors")
 (depends-on "web-mode")
 
+(depends-on "auto-complete")
 (depends-on "dockerfile-mode")
 (depends-on "git-gutter")
 (depends-on "go-autocomplete")
