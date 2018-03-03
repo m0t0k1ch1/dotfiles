@@ -60,21 +60,6 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 #==============================#
-# env initialization           #
-#==============================#
-
-# pyenv
-eval "$(pyenv init - zsh)"
-
-# plenv
-eval "$(plenv init - zsh)"
-
-# rbenv
-eval "$(rbenv init - zsh)"
-
-
-
-#==============================#
 # alias                        #
 #==============================#
 
@@ -101,12 +86,6 @@ alias gf="git fetch -p"
 alias gl="git log"
 alias gmp="git branch | peco | xargs git merge --no-ff"
 alias gs="git status"
-
-# mastodon
-alias m="gomif -i mastodon.m0t0k1ch1.com | jq ."
-
-# carton
-alias carton="plenv exec carton"
 
 # locate
 alias locate-update="sudo /usr/libexec/locate.updatedb"
