@@ -35,16 +35,11 @@
 (when (boundp 'show-trailing-whitespace)
   (setq-default show-trailing-whitespace t))
 
+;; C-t: other-window 1
+(bind-key "C-t" (lambda () (interactive) (other-window 1)))
+
 ;; C-h: delete-backward-char
 (bind-key "C-h" 'delete-backward-char)
-
-;; C-t: other-window-or-split
-(defun other-window-or-split();
-  (interactive)
-  (when (one-window-p)
-    (split-window-horizontally))
-  (other-window 1))
-(bind-key "C-t" 'other-window-or-split)
 
 ;; C-c c: comment-region
 (bind-key "C-c c" 'comment-region)
