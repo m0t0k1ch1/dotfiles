@@ -14,6 +14,7 @@
 (depends-on "dockerfile-mode")
 (depends-on "git-gutter")
 (depends-on "go-autocomplete")
+(depends-on "go-eldoc")
 (depends-on "go-mode")
 (depends-on "helm")
 (depends-on "init-loader")
