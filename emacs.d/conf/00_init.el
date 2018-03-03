@@ -35,12 +35,8 @@
 (when (boundp 'show-trailing-whitespace)
   (setq-default show-trailing-whitespace t))
 
-;; autopair-global-mode
-(require 'autopair)
-(autopair-global-mode)
-
 ;; C-h: delete-backward-char
-(define-key global-map (kbd "C-h") 'delete-backward-char)
+(bind-key "C-h" 'delete-backward-char)
 
 ;; C-t: other-window-or-split
 (defun other-window-or-split();
@@ -48,10 +44,10 @@
   (when (one-window-p)
     (split-window-horizontally))
   (other-window 1))
-(define-key global-map (kbd "C-t") 'other-window-or-split)
+(bind-key "C-t" 'other-window-or-split)
 
 ;; C-c c: comment-region
-(define-key global-map (kbd "C-c c") 'comment-region)
+(bind-key "C-c c" 'comment-region)
 
 ;; C-c u: uncomment-region
-(define-key global-map (kbd "C-c u") 'uncomment-region)
+(bind-key "C-c u" 'uncomment-region)
