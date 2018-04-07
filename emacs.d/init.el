@@ -14,6 +14,9 @@
 ;; exec-path
 (exec-path-from-shell-initialize)
 
+;; custom file
+(setq custom-file (locate-user-emacs-file "custom.el"))
+
 ;; init-loader
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/conf")
