@@ -5,7 +5,7 @@
 (package-initialize)
 
 ;; cask
-(require 'cask)
+(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
 
 ;; load-path
