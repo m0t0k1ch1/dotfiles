@@ -85,6 +85,7 @@ alias gd="git diff"
 alias gf="git fetch -p"
 alias gl="git log"
 alias gmp="git branch | peco | xargs git merge --no-ff"
+alias grp="git branch | peco | xargs git rebase"
 alias gs="git status"
 
 # locate
