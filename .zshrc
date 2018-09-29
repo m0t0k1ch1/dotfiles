@@ -21,7 +21,7 @@ show_vcs_info() {
 
 
 #==============================#
-# compeletion                  #
+# completion                   #
 #==============================#
 
 # compinit
