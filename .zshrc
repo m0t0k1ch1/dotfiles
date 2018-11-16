@@ -75,24 +75,14 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # emacsclient
 alias emacs='emacsclient -nw -a ""'
 
-# docker
-alias mysql='docker exec -it mysql mysql'
-alias mysqldump='docker exec mysql mysqldump'
-alias mariadb='docker exec -it mariadb mysql'
-alias psql='docker exec -it postgresql psql'
-alias redis='docker exec -it redis redis-cli'
-alias di='docker ps -q | xargs docker inspect --format="{{.NetworkSettings.IPAddress}} {{.State.Status}} {{.Name}} from {{.Config.Image}}"'
-
 # git
 alias gb="git branch"
 alias gbdp="git branch | peco | xargs git branch -d"
 alias gbDp="git branch | peco | xargs git branch -D"
 alias gc="git checkout"
-alias gcon="git diff --name-only --diff-filter=U"
 alias gcp="git branch | peco | xargs git checkout"
 alias gd="git diff"
 alias gf="git fetch -p"
-alias gl="git log"
 alias gmp="git branch | peco | xargs git merge --no-ff"
 alias grp="git branch | peco | xargs git rebase"
 alias gs="git status"
