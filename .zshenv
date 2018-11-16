@@ -17,3 +17,11 @@ PATH=$GOPATH/bin:$PATH
 PATH=$HOME/bin:$PATH
 
 export PATH
+
+
+
+#==============================#
+# editor                       #
+#==============================#
+
+export EDITOR=emacs
