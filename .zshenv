@@ -13,6 +13,9 @@ PATH=/usr/local/sbin:$PATH
 # go
 PATH=$GOPATH/bin:$PATH
 
+# rust
+PATH=$HOME/.cargo/bin:$PATH
+
 # home
 PATH=$HOME/bin:$PATH
 

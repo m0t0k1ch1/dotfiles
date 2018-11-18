@@ -25,5 +25,6 @@
 (depends-on "nginx-mode")
 (depends-on "obsidian-theme")
 (depends-on "php-mode")
+(depends-on "rust-mode")
 (depends-on "solidity-mode")
 (depends-on "yaml-mode")
