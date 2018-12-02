@@ -25,6 +25,7 @@ show_vcs_info() {
 #==============================#
 
 # compinit
+fpath=(~/.zsh/completions $fpath)
 autoload -U compinit
 compinit
 
