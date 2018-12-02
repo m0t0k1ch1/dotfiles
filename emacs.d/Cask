@@ -12,6 +12,7 @@
 
 (depends-on "auto-complete")
 (depends-on "dockerfile-mode")
+(depends-on "flycheck-rust")
 (depends-on "git-gutter")
 (depends-on "go-autocomplete")
 (depends-on "go-eldoc")
