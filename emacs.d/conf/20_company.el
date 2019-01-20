@@ -1,0 +1,7 @@
+(global-company-mode t)
+(setq company-tooltip-limit 20)
+(setq company-idle-delay .3)
+(define-key company-active-map (kbd "C-n") 'company-select-next)
+(define-key company-active-map (kbd "C-p") 'company-select-previous)
+(define-key company-search-map (kbd "C-n") 'company-select-next)
+(define-key company-search-map (kbd "C-p") 'company-select-previous)

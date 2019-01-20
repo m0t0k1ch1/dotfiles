@@ -4,19 +4,13 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-;; cask
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
 
-;; load-path
 (add-to-list 'load-path "~/.ghq/src/github.com/nsf/gocode/emacs")
 
-;; exec-path
 (exec-path-from-shell-initialize)
 
-;; custom file
 (setq custom-file (locate-user-emacs-file "custom.el"))
 
-;; init-loader
-(require 'init-loader)
 (init-loader-load "~/.emacs.d/conf")

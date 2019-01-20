@@ -10,11 +10,10 @@
 (depends-on "multiple-cursors")
 (depends-on "web-mode")
 
-(depends-on "auto-complete")
+(depends-on "company")
+(depends-on "company-go")
 (depends-on "dockerfile-mode")
 (depends-on "flycheck-rust")
-(depends-on "git-gutter")
-(depends-on "go-autocomplete")
 (depends-on "go-eldoc")
 (depends-on "go-mode")
 (depends-on "helm")

@@ -1,48 +1,24 @@
-;; use utf-8
 (prefer-coding-system 'utf-8)
 
-;; hide menu bar
-(menu-bar-mode -1)
+(menu-bar-mode 0)
+(show-paren-mode)
 
-;; show line number
-(line-number-mode t)
+(global-linum-mode)
+(setq linum-format "%4d: ")
 
-;; show column number
-(column-number-mode t)
-
-;; disable backup
 (setq make-backup-files nil)
-
-;; disable auto save
 (setq auto-save-default nil)
-
-;; delete auto save files
 (setq delete-auto-save-files t)
 
-;; disable tab-character
 (setq-default indent-tabs-mode nil)
-
-;; tab-width: 4
 (setq-default tab-width 4)
 
-;; scroll-step: 1
 (setq scroll-step 1)
 
-;; highlight paired bracket
-(show-paren-mode 1)
-
-;; highlight whitespace
 (when (boundp 'show-trailing-whitespace)
   (setq-default show-trailing-whitespace t))
 
-;; C-t: other-window 1
-(bind-key "C-t" (lambda () (interactive) (other-window 1)))
-
-;; C-h: delete-backward-char
+(bind-key "C-t" 'other-window)
 (bind-key "C-h" 'delete-backward-char)
-
-;; C-c c: comment-region
 (bind-key "C-c c" 'comment-region)
-
-;; C-c u: uncomment-region
 (bind-key "C-c u" 'uncomment-region)
