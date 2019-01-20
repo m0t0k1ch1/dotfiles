@@ -2,6 +2,8 @@
 
 (menu-bar-mode 0)
 (show-paren-mode)
+
+;; linum-mode does not work well with git-gutter
 (global-display-line-numbers-mode)
 
 (setq make-backup-files nil)
