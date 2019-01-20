@@ -40,8 +40,8 @@ setopt share_history
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
-bindkey "^P" history-beginning-search-backward-end
-bindkey "^N" history-beginning-search-forward-end
+bindkey '^P' history-beginning-search-backward-end
+bindkey '^N' history-beginning-search-forward-end
 
 # zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
@@ -77,23 +77,23 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias emacs='emacsclient -nw -a ""'
 
 # git
-alias gb="git branch"
-alias gbdp="git branch | peco | xargs git branch -d"
-alias gbDp="git branch | peco | xargs git branch -D"
-alias gc="git checkout"
-alias gcp="git branch | peco | xargs git checkout"
-alias gd="git diff"
-alias gf="git fetch -p"
-alias gmp="git branch | peco | xargs git merge --no-ff"
-alias grp="git branch | peco | xargs git rebase"
-alias gs="git status"
+alias gb='git branch'
+alias gbdp='git branch | peco | xargs git branch -d'
+alias gbDp='git branch | peco | xargs git branch -D'
+alias gc='git checkout'
+alias gcp='git branch | peco | xargs git checkout'
+alias gd='git diff'
+alias gf='git fetch -p'
+alias gmp='git branch | peco | xargs git merge --no-ff'
+alias grp='git branch | peco | xargs git rebase'
+alias gs='git status'
 
 # locate
-alias locate-update="sudo /usr/libexec/locate.updatedb"
+alias locate-update='sudo /usr/libexec/locate.updatedb'
 
 # utility
-alias ll="exa -abghl"
-alias rand="cat /dev/urandom | LC_CTYPE=C tr -dc '[:alnum:]' | head -c"
+alias ll='exa -abghl'
+alias rand='cat /dev/urandom | LC_CTYPE=C tr -dc "[:alnum:]" | head -c'
 
 
 
