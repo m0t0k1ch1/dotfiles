@@ -2,9 +2,7 @@
 
 (menu-bar-mode 0)
 (show-paren-mode)
-
-(global-linum-mode)
-(setq linum-format "%4d: ")
+(global-display-line-numbers-mode)
 
 (setq make-backup-files nil)
 (setq auto-save-default nil)
