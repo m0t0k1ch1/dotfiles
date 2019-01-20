@@ -1,4 +1,4 @@
-(helm-mode t)
+(helm-mode)
 (bind-key "C-x b" 'helm-for-files)
 (bind-key "C-x y" 'helm-show-kill-ring)
 (bind-key "C-x C-f" 'helm-find-files)
