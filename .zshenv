@@ -27,4 +27,4 @@ export PATH
 # editor                       #
 #==============================#
 
-export EDITOR=emacs
+export EDITOR='emacsclient -nw -a ""'
