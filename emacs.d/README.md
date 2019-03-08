@@ -1,9 +1,3 @@
-## Install packages
-
-``` sh
-$ cask install
-```
-
 ## Install dependencies
 
 ### gocode
@@ -26,4 +20,16 @@ $ brew install llvm
 
 ```
 M-x irony-install-server RET
+```
+
+## Install packages
+
+``` sh
+$ cask install
+```
+
+## Update packages
+
+``` sh
+$ cask update
 ```
