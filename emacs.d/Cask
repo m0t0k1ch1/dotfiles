@@ -12,6 +12,7 @@
 
 (depends-on "company")
 (depends-on "company-go")
+(depends-on "company-irony")
 (depends-on "dockerfile-mode")
 (depends-on "flycheck-rust")
 (depends-on "git-gutter")
@@ -20,6 +21,7 @@
 (depends-on "google-c-style")
 (depends-on "helm")
 (depends-on "init-loader")
+(depends-on "irony")
 (depends-on "json-mode")
 (depends-on "js2-mode")
 (depends-on "markdown-mode")
