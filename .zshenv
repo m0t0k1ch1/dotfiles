@@ -1,25 +1,17 @@
 #==============================#
+# shell                        #
+#==============================#
+
+export SHELL=/usr/local/bin/zsh
+
+
+
+#==============================#
 # path                         #
 #==============================#
 
 export GOPATH=$HOME/.ghq
-
-PATH=/usr/bin:/bin:/usr/sbin:/sbin
-
-# homebrew
-PATH=/usr/local/bin:$PATH
-PATH=/usr/local/sbin:$PATH
-
-# go
-PATH=$GOPATH/bin:$PATH
-
-# rust
-PATH=$HOME/.cargo/bin:$PATH
-
-# home
-PATH=$HOME/bin:$PATH
-
-export PATH
+export PATH=$HOME/bin:$HOME/.cargo/bin:$GOPATH/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 
 
 
