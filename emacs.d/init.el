@@ -9,9 +9,6 @@
 
 (exec-path-from-shell-initialize)
 
-(setq custom-file (locate-user-emacs-file "custom.el"))
-
-
 (prefer-coding-system 'utf-8)
 
 (menu-bar-mode 0)
