@@ -7,4 +7,3 @@
 (depends-on "git-gutter")
 (depends-on "helm")
 (depends-on "neotree")
-(depends-on "obsidian-theme")
