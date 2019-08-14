@@ -55,6 +55,9 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # direnv
 eval "$(direnv hook zsh)"
 
+# nodenv
+eval "$(nodenv init -)"
+
 
 
 #==============================#
