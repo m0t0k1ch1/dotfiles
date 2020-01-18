@@ -97,6 +97,7 @@ alias locate-update='sudo /usr/libexec/locate.updatedb'
 # utility
 alias ll='exa -abghl'
 alias rand='cat /dev/urandom | LC_CTYPE=C tr -dc "[:alnum:]" | head -c'
+alias x='cd ~/.ghq/src/github.com/m0t0k1ch1/workspace'
 
 
 
