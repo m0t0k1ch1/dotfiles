@@ -1,8 +1,9 @@
 (source gnu)
 (source melpa)
 
-(depends-on "bind-key")
 (depends-on "cask")
+
+(depends-on "bind-key")
 (depends-on "exec-path-from-shell")
 (depends-on "git-gutter")
 (depends-on "helm")
