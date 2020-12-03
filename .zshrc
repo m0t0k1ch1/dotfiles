@@ -14,7 +14,23 @@ show_vcs_info() {
 
 
 
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey '^P' history-beginning-search-backward-end
+bindkey '^N' history-beginning-search-forward-end
+
+
+
 eval "$(anyenv init -)"
+
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+    autoload -Uz compinit
+    compinit
+fi
 
 
 
@@ -23,5 +39,5 @@ alias gc='git checkout'
 alias gf='git fetch -p'
 alias gs='git status'
 
-alias ll='exa -abghl'
+alias ll='ls -aGhl'
 alias rand='cat /dev/urandom | LC_CTYPE=C tr -dc "[:alnum:]" | head -c'
