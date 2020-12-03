@@ -1,20 +1,17 @@
-setopt prompt_subst
-autoload -Uz vcs_info
 PROMPT='%F{cyan}%B%n@%m%b%f > '
-RPROMPT=$'$(show_vcs_info)'
 
+# ref. http://tkengo.github.io/blog/2013/05/12/zsh-vcs-info
+autoload -Uz vcs_info
+setopt prompt_subst
 zstyle ':vcs_info:*' formats '%F{green}%b%f%F{white}:%f%F{cyan}%r%f'
 zstyle ':vcs_info:*' actionformats '%F{green}%b%f%F{white}:%f%F{cyan}%r%f%F{white}|%f%F{red}%a%f'
-zstyle ':vcs_info:*' enable git
-
-show_vcs_info() {
-    vcs_info
-    echo $vcs_info_msg_0_
-}
+precmd () { vcs_info }
+RPROMPT='${vcs_info_msg_0_}'
 
 
 
-autoload history-search-end
+# ref. https://unix.stackexchange.com/questions/97843/how-can-i-search-history-with-text-already-entered-at-the-prompt-in-zsh
+autoload -Uz history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey '^P' history-beginning-search-backward-end
