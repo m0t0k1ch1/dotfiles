@@ -38,3 +38,23 @@ alias gs='git status'
 
 alias ll='ls -aGhl'
 alias rand='cat /dev/urandom | LC_CTYPE=C tr -dc "[:alnum:]" | head -c'
+
+
+
+function cdg() {
+    current_dir=$PWD
+    dir=$PWD
+    while [ "$dir" != '/' ]
+    do
+        for file in .git
+        do
+            if [ -e $dir/$file ]; then
+                echo "$dir"
+                cd $dir
+                return 0
+            fi
+        done
+        dir=`dirname $dir`
+    done
+    echo "$current_dir is not included in the project managed by Git"
+}
