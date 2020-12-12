@@ -31,6 +31,11 @@ fi
 
 
 
+export GOPATH=$HOME/ghq
+export PATH=$GOPATH/bin:/opt/homebrew/bin:/usr/local/go/bin:$PATH
+
+
+
 alias gb='git branch'
 alias gc='git checkout'
 alias gf='git fetch -p'
