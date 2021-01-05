@@ -1,3 +1,7 @@
+export PATH=$HOME/go/bin:/opt/homebrew/bin:/usr/local/go/bin:$PATH
+
+
+
 PROMPT='%F{cyan}%B%n@%m%b%f > '
 
 # ref. http://tkengo.github.io/blog/2013/05/12/zsh-vcs-info
@@ -28,11 +32,6 @@ if type brew &>/dev/null; then
     autoload -Uz compinit
     compinit
 fi
-
-
-
-export GOPATH=$HOME/ghq
-export PATH=$GOPATH/bin:/opt/homebrew/bin:/usr/local/go/bin:$PATH
 
 
 
