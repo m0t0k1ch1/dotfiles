@@ -40,7 +40,7 @@ alias gc='git checkout'
 alias gf='git fetch -p'
 alias gs='git status'
 
-alias ll='ls -aGhl'
+alias ll='exa -al'
 alias rand='cat /dev/urandom | LC_CTYPE=C tr -dc "[:alnum:]" | head -c'
 
 
