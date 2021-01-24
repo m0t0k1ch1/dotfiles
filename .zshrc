@@ -1,163 +1,103 @@
-#==============================#
-# prompt                       #
-#==============================#
+export PATH=$HOME/bin:$HOME/go/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
-setopt prompt_subst
-autoload -Uz vcs_info
+
+
 PROMPT='%F{cyan}%B%n@%m%b%f > '
-RPROMPT=$'$(show_vcs_info)'
 
-zstyle ':vcs_info:*' formats \
-    '%F{green}%b%f%F{white}:%f%F{cyan}%r%f'
-zstyle ':vcs_info:*' actionformats \
-    '%F{green}%b%f%F{white}:%f%F{cyan}%r%f%F{white}|%f%F{red}%a%f'
-zstyle ':vcs_info:*' enable git
-
-show_vcs_info() {
-    vcs_info
-    echo $vcs_info_msg_0_
-}
+# ref. http://tkengo.github.io/blog/2013/05/12/zsh-vcs-info
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:*' formats '%F{green}%b%f%F{white}:%f%F{cyan}%r%f'
+zstyle ':vcs_info:*' actionformats '%F{green}%b%f%F{white}:%f%F{cyan}%r%f%F{white}|%f%F{red}%a%f'
+precmd () { vcs_info }
+RPROMPT='${vcs_info_msg_0_}'
 
 
 
-#==============================#
-# completion                   #
-#==============================#
-
-# compinit
-fpath=(~/.zsh/completions $fpath)
-autoload -U compinit
-compinit
-
-# command history configuration
-HISTFILE=~/.zsh_history
+# ref. http://zsh.sourceforge.net/Doc/Release/Options.html
 HISTSIZE=10000
-SAVEHIST=10000
-setopt hist_ignore_dups
+SAVEHIST=1000000
+setopt hist_ignore_all_dups
+setopt hist_reduce_blanks
 setopt share_history
 
-# command history search
-autoload history-search-end
+# ref. https://unix.stackexchange.com/questions/97843/how-can-i-search-history-with-text-already-entered-at-the-prompt-in-zsh
+autoload -Uz history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey '^P' history-beginning-search-backward-end
 bindkey '^N' history-beginning-search-forward-end
 
-# zsh-completions
-fpath=(/usr/local/share/zsh-completions $fpath)
 
 
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+    autoload -Uz compinit
+    compinit
+fi
 
-#==============================#
-# env                          #
-#==============================#
-
-# direnv
-eval "$(direnv hook zsh)"
-
-# nodenv
-eval "$(nodenv init -)"
-
-
-
-#==============================#
-# utility                      #
-#==============================#
-
-# zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# z
-. `brew --prefix`/etc/profile.d/z.sh
+. `/usr/local/bin/brew --prefix`/etc/profile.d/z.sh
 
 
 
-#==============================#
-# alias                        #
-#==============================#
-
-# emacsclient
-alias emacs='emacsclient -nw -a ""'
-
-# git
 alias gb='git branch'
-alias gbdp='git branch | peco | xargs git branch -d'
-alias gbDp='git branch | peco | xargs git branch -D'
 alias gc='git checkout'
-alias gcp='git branch | peco | xargs git checkout'
-alias gd='git diff'
 alias gf='git fetch -p'
-alias gmp='git branch | peco | xargs git merge --ff'
-alias grp='git branch | peco | xargs git rebase'
 alias gs='git status'
 
-# locate
-alias locate-update='sudo /usr/libexec/locate.updatedb'
+alias gbdp='git branch | peco | xargs git branch -d'
+alias gbDp='git branch | peco | xargs git branch -D'
+alias gcp='git branch | peco | xargs git checkout'
+alias gmp='git branch | peco | xargs git merge'
 
-# utility
-alias ll='exa -abghl'
+alias ll='exa -al'
 alias rand='cat /dev/urandom | LC_CTYPE=C tr -dc "[:alnum:]" | head -c'
-alias x='cd ~/.ghq/src/github.com/m0t0k1ch1/workspace'
 
 
-
-#==============================#
-# function                     #
-#==============================#
-
-function zp() {
-    dir=`z | peco | tr -s ' ' | cut -d' ' -f2`
-    echo $dir
-    cd $dir
-}
-
-function gisp() {
-    url=`gis $@ | peco | cut -f2`
-    open $url
-}
 
 function cdg() {
-    current_dir=$PWD
-    dir=$PWD
-    while [ "$dir" != '/' ]
+    local current_dir=$PWD
+    local dest_dir=$PWD
+    while [ $dest_dir != '/' ]
     do
         for file in .git
         do
-            if [ -e $dir/$file ]; then
-                echo "$dir"
-                cd $dir
+            if [ -e $dest_dir/$file ]; then
+                echo $dest_dir
+                cd $dest_dir
                 return 0
             fi
         done
-        dir=`dirname $dir`
+        dest_dir=`dirname $dest_dir`
     done
     echo "$current_dir is not included in the project managed by Git"
 }
 
-function peco-select-history() {
+function select_command_by_peco() {
     BUFFER=$(history -n 1 | eval tail -r | peco --query "$LBUFFER")
     CURSOR=$#BUFFER
 }
-zle -N peco-select-history
-bindkey '^r' peco-select-history
+zle -N select_command_by_peco
+bindkey '^r' select_command_by_peco
 
-function peco-src() {
-    local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
-    if [ -n "$selected_dir" ]; then
-        BUFFER="cd ${selected_dir}"
+function select_repo_by_peco() {
+    local selected_dir=$(fd . $HOME/ghq --min-depth 3 --max-depth 3 | peco --query "$LBUFFER")
+    if [ -n $selected_dir ]; then
+        BUFFER="cd $selected_dir"
         zle accept-line
     fi
 }
-zle -N peco-src
-bindkey '^[' peco-src
-eval $(/usr/libexec/path_helper -s)
+zle -N select_repo_by_peco
+bindkey '^[' select_repo_by_peco
 
-function peco-ssh-host() {
+function select_host_by_peco() {
     local selected_host=$(egrep -i '^Host\s+.+' $HOME/.ssh/config $(find $HOME/.ssh/conf.d -follow -type f 2>/dev/null) | egrep -v '[*?]' | awk '{print $2}' | sort | peco --query "$LBUFFER")
-    if [ -n "$selected_host" ]; then
-        BUFFER="ssh ${selected_host} -A"
+    if [ -n $selected_host ]; then
+        BUFFER="ssh $selected_host -A"
         zle accept-line
     fi
 }
-zle -N peco-ssh-host
-bindkey '^]' peco-ssh-host
+zle -N select_host_by_peco
+bindkey '^]' select_host_by_peco
