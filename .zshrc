@@ -1,4 +1,4 @@
-export PATH=$HOME/go/bin:/opt/homebrew/bin:$PATH
+export PATH=$HOME/go/bin:/opt/homebrew/opt/mysql-client/bin:/opt/homebrew/bin:$PATH
 
 
 
