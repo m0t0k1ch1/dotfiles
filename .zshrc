@@ -32,6 +32,7 @@ bindkey '^N' history-beginning-search-forward-end
 
 
 eval "$(anyenv init -)"
+eval "$(direnv hook zsh)"
 
 if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
