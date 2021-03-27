@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:$HOME/go/bin:/opt/homebrew/opt/mysql-client/bin:/opt/homebrew/bin:$PATH
+export PATH=$HOME/bin:$HOME/go/bin:/opt/homebrew/opt/mysql-client@5.7/bin:/opt/homebrew/bin:$PATH
 export GOPRIVATE=github.com/SIVIRA
 
 
